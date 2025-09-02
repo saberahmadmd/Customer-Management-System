@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 const dbDir = path.join(__dirname, 'db');
 if (!fs.existsSync(dbDir)) {
   fs.mkdirSync(dbDir, { recursive: true });
-  console.log('📁 Created database directory');
+  console.log('Created database directory');
 }
 
 // Middleware
