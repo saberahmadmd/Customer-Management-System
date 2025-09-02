@@ -30,28 +30,3 @@ app.use((req, res) => {
 
 // Start server
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
-
-
-
-
-/*
-// server/index.js
-const express = require("express");
-const cors = require("cors");
-const app = express();
-const PORT = 5000;
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// Routes
-const customerRoutes = require("./routes/customerRoutes");
-const addressRoutes = require("./routes/addressRoutes");
-
-app.use("/api/customers", customerRoutes);
-app.use("/api/customers", addressRoutes); // nested under customers
-
-// Start server
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
-*/
