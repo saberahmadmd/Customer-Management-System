@@ -1,10 +1,18 @@
 const express = require("express");
 const cors = require("cors");
+const fs = require('fs');
 const path = require("path");
 const app = express();
 require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
+
+// Ensure database directory exists
+const dbDir = path.join(__dirname, 'db');
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+  console.log('📁 Created database directory');
+}
 
 // Middleware
 app.use(cors());
