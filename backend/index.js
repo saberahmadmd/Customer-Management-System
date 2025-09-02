@@ -15,7 +15,10 @@ if (!fs.existsSync(dbDir)) {
 }
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000', // Your React app URL
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
