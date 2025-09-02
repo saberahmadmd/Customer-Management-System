@@ -16,7 +16,10 @@ if (!fs.existsSync(dbDir)) {
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000', // Your React app URL
+  origin: [
+    'https://customer-management-system-one.vercel.app', // Your Vercel frontend
+    'http://localhost:3000' // Local development
+  ],
   credentials: true
 }));
 app.use(express.json());
